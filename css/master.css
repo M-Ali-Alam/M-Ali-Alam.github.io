@@ -13,7 +13,11 @@
   }
 
   body {
-    background-color: beige; /* set the background color here */
+    background-color: #d9d9d9;
+    background-image: url('../Images/background-image.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: black; /* set the text color to black here */
     font-family: Arial, Helvetica, sans-serif; /* set the font here */
     text-align: center;/* set the text alignment here */
@@ -25,6 +29,7 @@
   }
 
   h1 {
+    color: #075AAB;/* set the text color of to #075AAB here */
     margin-bottom: 0.5rem;
     margin-top: 3rem;
    }
