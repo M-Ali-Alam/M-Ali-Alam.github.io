@@ -1,9 +1,7 @@
 const App = () => {
 
   return (
-    <>
-    <p>Muhammad Ali Alam</p>
-    </>
+    <div>Muhammad Ali Alam</div>
   )
 }
 
