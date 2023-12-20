@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, logoAli, menu, close } from "../assets";
+import { logo, menu, close } from "../assets";
 
 const Navbar: FC = () => {
   const [active, setActive] = useState("");
@@ -21,7 +21,7 @@ const Navbar: FC = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logoAli} alt="logo" className="w-12 h-12 object-contain" />
+          <img src={logo} alt="logo" className="w-12 h-12 object-contain" />
         </Link>
       </div>
     </nav>
