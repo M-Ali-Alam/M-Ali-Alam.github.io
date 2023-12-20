@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const Earth = () => {
+const Earth: FC = () => {
   return (
     <div>Earth</div>
   )

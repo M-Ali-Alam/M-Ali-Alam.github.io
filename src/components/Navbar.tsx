@@ -1,0 +1,31 @@
+import React, { FC, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+import { styles } from "../styles";
+import { navLinks } from "../constants";
+import { logo, logoAli, menu, close } from "../assets";
+
+const Navbar: FC = () => {
+  const [active, setActive] = useState("");
+
+  return (
+    <nav
+      className={`${styles.paddingX} w-full flex items-centre py-5 fixed top-0 z-20 bg-primary`}
+    >
+      <div className="w-full flex justify-between items-centre max-w-7x1 mx-auto">
+        <Link
+          to="/"
+          className="flex items-center gap-2"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
+        >
+          <img src={logoAli} alt="logo" className="w-12 h-12 object-contain" />
+        </Link>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
