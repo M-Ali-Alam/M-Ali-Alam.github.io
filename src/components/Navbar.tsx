@@ -21,8 +21,13 @@ const Navbar: FC = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-12 h-12 object-contain" />
+          {/* <div className="w-12 h-12 rounded-full bg-white flex justify-center items-center"> */}
+          <img src={logo} alt="logo" className="w-12 h-12 bg-white object-contain"  />
+          {/* </div> */}
+          <p className="text-white text-[18px] font-bold cursor-pointer">Muhammad Ali Alam
+          <span className="sm:block hidden">| Software Developer</span></p>
         </Link>
+        <p className="text-red-500">asdasasdasd</p>
       </div>
     </nav>
   );
