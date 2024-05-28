@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import React from 'react'
 
-const Experience: FC = () => {
+const Experience: React.FC = () => {
   return (
     <div>Experience</div>
   )
