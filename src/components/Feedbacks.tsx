@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Feedbacks = () => {
+const Feedbacks: React.FC = () => {
   return (
     <div>Feedbacks</div>
   )
