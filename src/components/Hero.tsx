@@ -1,11 +1,11 @@
-import React from 'react';
+import {FC} from 'react';
 import motion from 'framer-motion';
 import { ComputersCanvas } from './canvas';
 import { styles } from '../styles';
 
 
 
-const Hero: React.FC = () => {
+const Hero: FC = () => {
   return (
     <section className='relative w-full h-screen mx-auto'>
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
@@ -16,7 +16,8 @@ const Hero: React.FC = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I am <span className='text-[#915eff]'>Ali</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>I develop Mobile and web based Applications. My specialization lies in making front end of web and mobile app. I primarily work on React and React native, with some experience in .net and flutter.</p>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>I develop Mobile and Web based Applications.</p>
+          {/* My specialization lies in making front end of web and mobile app. I primarily work on React and React native, with some experience in .net and flutter. */}
         </div>
       </div>
 
