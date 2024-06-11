@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { ComputersCanvas } from './canvas';
 import { styles } from '../styles';
@@ -16,7 +16,7 @@ const Hero: FC = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I am <span className='text-[#915eff]'>Ali</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>I develop Mobile and Web based Applications.</p>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>I build Softwares.</p>
           {/* My specialization lies in making front end of web and mobile app. I primarily work on React and React native, with some experience in .net and flutter. */}
         </div>
       </div>
