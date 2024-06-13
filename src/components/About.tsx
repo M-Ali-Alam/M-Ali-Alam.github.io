@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import Tilt from "react-tilt";
 
 import { motion } from "framer-motion";
@@ -6,7 +6,9 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard: React.FC<{
+import { SectionWrapper } from "../hoc";
+
+const ServiceCard: FC<{
   index: number;
   title: string;
   icon: string;
@@ -41,7 +43,7 @@ const ServiceCard: React.FC<{
   );
 };
 
-const About: React.FC = () => {
+const About: FC = () => {
   return (
     <>
       <motion.div variants={textVariant(1)}>
@@ -71,4 +73,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default SectionWrapper(About, "about");
