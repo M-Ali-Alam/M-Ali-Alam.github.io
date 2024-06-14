@@ -53,11 +53,11 @@ const Contact: FC = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
-              type="text"
-              name="name"
-              value={form.name}
+              type="email"
+              name="email"
+              value={form.email}
               onChange={handleChange}
-              placeholder="Whats your name?"
+              placeholder="Whats your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
@@ -65,15 +65,22 @@ const Contact: FC = () => {
           {/* message placeholder and input */}
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
-            <input
-              type="text"
-              name="name"
+            <textarea
+              rows={7}
+              name="message"
               value={form.name}
               onChange={handleChange}
-              placeholder="Whats your name?"
+              placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
+
+          <button
+            type="submit"
+            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+          >
+            {loading ? "Sending..." : "Send"}
+          </button>
         </form>
       </motion.div>
     </div>
