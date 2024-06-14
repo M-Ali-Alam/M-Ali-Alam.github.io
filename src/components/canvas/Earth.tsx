@@ -32,4 +32,4 @@ const EarthCanvas: FC = () => {
   );
 };
 
-export default Earth;
+export default EarthCanvas;
