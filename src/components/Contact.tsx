@@ -44,20 +44,20 @@ const Contact: FC = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Whats your name?"
+              placeholder="What is your good name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
 
           {/* email placeholder and input */}
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
+            <span className="text-white font-medium mb-4">Your emil</span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Whats your email?"
+              placeholder="What is your web address?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
