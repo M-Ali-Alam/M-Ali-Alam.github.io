@@ -1,6 +1,5 @@
 import { FC, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -18,9 +17,47 @@ const Contact: FC = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const config = {
+      SecureToken: "b852718c-6418-47af-92d7-6e3a57851332",
+      To: "muhammadalialam14@gmail.com",
+      From: form.email,
+      Subject: `${form.name} messaged you through your website`,
+      Body: form.message,
+    };
+
+    if (window.Email) {
+      window.Email.send(config).then(
+        () => {
+          setLoading(false);
+          alert("Message sent successfully, I will get back to you soon");
+
+          console.log("Message sent successfully");
+
+          setForm({ name: "", email: "", message: "" });
+        },
+        (error: any) => {
+          setLoading(false);
+          console.error(error);
+          alert("Something went wrong, please try again later");
+        }
+      );
+    } else {
+      setLoading(false);
+      console.error("Email object not found");
+      alert("Email sending service is not available");
+    }
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -51,7 +88,7 @@ const Contact: FC = () => {
 
           {/* email placeholder and input */}
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your emil</span>
+            <span className="text-white font-medium mb-4">Your email</span>
             <input
               type="email"
               name="email"
@@ -64,11 +101,11 @@ const Contact: FC = () => {
 
           {/* message placeholder and input */}
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
+            <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
               rows={7}
               name="message"
-              value={form.name}
+              value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
