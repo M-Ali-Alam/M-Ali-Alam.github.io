@@ -35,7 +35,7 @@ const ProjectCard: FC<{
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 cursor-pointer rounded-full flex justify-centre items-centre"
+              className="black-gradient w-10 h-10 cursor-pointer rounded-full flex justify-center items-center"
             >
               <img
                 src={github}

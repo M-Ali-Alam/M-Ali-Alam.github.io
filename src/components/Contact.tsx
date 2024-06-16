@@ -6,6 +6,8 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn, textVariant } from "../utils/motion";
 
+import { Email } from "./smtp.js";
+
 const Contact: FC = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
 
@@ -36,8 +38,8 @@ const Contact: FC = () => {
       Body: form.message,
     };
 
-    if (window.Email) {
-      window.Email.send(config).then(
+    if (Email) {
+      Email.send(config).then(
         () => {
           setLoading(false);
           alert("Message sent successfully, I will get back to you soon");
