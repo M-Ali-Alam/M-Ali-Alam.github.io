@@ -1,12 +1,11 @@
+import emailjs from "@emailjs/browser";
+
 import { FC, useState, useRef } from "react";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
-import { slideIn, textVariant } from "../utils/motion";
-
-import { Email } from "./smtp.js";
+import { slideIn } from "../utils/motion";
 
 const Contact: FC = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -31,21 +30,20 @@ const Contact: FC = () => {
     setLoading(true);
 
     const config = {
-      SecureToken: "b852718c-6418-47af-92d7-6e3a57851332",
-      To: "muhammadalialam14@gmail.com",
-      From: form.email,
-      Subject: `${form.name} messaged you through your website`,
-      Body: form.message,
+      from_name: form.name,
+      to_name: "Ali",
+      form_email: form.email,
+      to_email: "muhammadalialam14@gmail.com",
+      message: form.message,
     };
 
-    if (Email) {
-      Email.send(config).then(
+    emailjs
+      .send("service_3nl22bw", "template_ga59a1c", config, "oOI78c0zjmhFMcjiM")
+      .then(
         () => {
           setLoading(false);
-          alert("Message sent successfully, I will get back to you soon");
-
+          alert("Thank you for your message, I will get back to you soon");
           console.log("Message sent successfully");
-
           setForm({ name: "", email: "", message: "" });
         },
         (error: any) => {
@@ -54,11 +52,36 @@ const Contact: FC = () => {
           alert("Something went wrong, please try again later");
         }
       );
-    } else {
-      setLoading(false);
-      console.error("Email object not found");
-      alert("Email sending service is not available");
-    }
+
+    // const config = {
+    //   SecureToken: "b852718c-6418-47af-92d7-6e3a57851332",
+    //   To: "muhammadalialam14@gmail.com",
+    //   From: form.email,
+    //   Subject: `${form.name} messaged you through your website`,
+    //   Body: form.message,
+    // };
+
+    // if (Email) {
+    //   Email.send(config).then(
+    //     () => {
+    //       setLoading(false);
+    //       alert("Message sent successfully, I will get back to you soon");
+
+    //       console.log("Message sent successfully");
+
+    //       setForm({ name: "", email: "", message: "" });
+    //     },
+    //     (error: any) => {
+    //       setLoading(false);
+    //       console.error(error);
+    //       alert("Something went wrong, please try again later");
+    //     }
+    //   );
+    // } else {
+    //   setLoading(false);
+    //   console.error("Email object not found");
+    //   alert("Email sending service is not available");
+    // }
   };
 
   return (
