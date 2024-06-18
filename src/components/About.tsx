@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Tilt from "react-tilt";
+// import Tilt from "react-tilt";
 
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -14,32 +14,32 @@ const ServiceCard: FC<{
   icon: string;
 }> = ({ index, title, icon }) => {
   return (
-    <Tilt
-      options={{
-        max: 25,
-        scale: 1,
-        speed: 450,
-      }}
-      className="xs:w-[250px] w-full"
+    // <Tilt
+    //   options={{
+    //     max: 25,
+    //     scale: 1,
+    //     speed: 450,
+    //   }}
+    //   className="xs:w-[250px] w-full"
+    // >
+    <motion.div
+      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
-      <motion.div
-        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      <div
+        // the following code was not working hence shifted it to above Tilt component
+        // options={{
+        //   max: 25,
+        //   scale: 1,
+        //   speed: 450,
+        // }}
+        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
-        <div
-          // the following code was not working hence shifted it to above Tilt component
-          // options={{
-          //   max: 25,
-          //   scale: 1,
-          //   speed: 450,
-          // }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-        >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold">{title}</h3>
-        </div>
-      </motion.div>
-    </Tilt>
+        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+        <h3 className="text-white text-[20px] font-bold">{title}</h3>
+      </div>
+    </motion.div>
+    // </Tilt>
   );
 };
 
