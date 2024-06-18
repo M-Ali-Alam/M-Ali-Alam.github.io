@@ -17,7 +17,6 @@ interface FeedbackCardProps {
 
 const FeedbackCard: FC<FeedbackCardProps> = ({
   index,
-  key,
   testimonial,
   name,
   designation,

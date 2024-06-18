@@ -1,12 +1,6 @@
 import { FC, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-  Decal,
-  Float,
-  OrbitControls,
-  Preload,
-  useTexture,
-} from "@react-three/drei";
+import { Decal, Float, OrbitControls, useTexture } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Ball: FC<{ icon: string }> = ({ icon }) => {
@@ -28,7 +22,6 @@ const Ball: FC<{ icon: string }> = ({ icon }) => {
         <Decal
           map={decal}
           rotation={[2 * Math.PI, 0, 6.25]}
-          flatShading
           position={[0, 0, 1]}
         />
       </mesh>
