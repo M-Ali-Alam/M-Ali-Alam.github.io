@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://m-ali-alam.github.io/M-Ali-Alam.github.io/",
   "scripts": {
-    "predeploy": "tsc && vite build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc && vite build",
