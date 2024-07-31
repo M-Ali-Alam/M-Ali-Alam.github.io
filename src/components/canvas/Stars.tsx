@@ -1,15 +1,18 @@
-import { FC, useState, useRef, Suspense } from "react";
+import { FC, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
+import { Points, PointMaterial } from "@react-three/drei";
+import * as THREE from "three";
 import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars: FC = (props) => {
-  const ref = useRef();
+  const ref = useRef<THREE.Points | null>(new THREE.Points());
   const sphere = random.inSphere(new Float32Array(5000), { radius: 1.2 });
 
-  useFrame((state, delta) => {
-    (ref.current as any).rotation.x -= delta / 10;
-    (ref.current as any).rotation.y -= delta / 10;
+  useFrame((delta) => {
+    if (ref.current) {
+      ref.current.rotation.x -= Number(delta) / 10;
+      ref.current.rotation.y -= Number(delta) / 10;
+    }
   });
 
   return (

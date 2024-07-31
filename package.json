@@ -5,12 +5,13 @@
   "type": "module",
   "homepage": "https://m-ali-alam.github.io/M-Ali-Alam.github.io/",
   "scripts": {
-    "predeploy": "tsc && vite build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo \"no test specified\""
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -22,7 +23,6 @@
     "react-dom": "^18.2.0",
     "react-parallax-tilt": "^1.7.228",
     "react-router-dom": "^6.21.0",
-    "react-tilt": "^0.1.4",
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.165.0"
   },
