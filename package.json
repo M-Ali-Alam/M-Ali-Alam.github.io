@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://m-ali-alam.github.io/M-Ali-Alam.github.io/",
+  "homepage": "http://m-ali-alam.github.io/M-Ali-Alam/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
