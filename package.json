@@ -2,6 +2,7 @@
   "name": "m-ali-alam.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://m-ali-alam.github.io/m-ali-alam.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
