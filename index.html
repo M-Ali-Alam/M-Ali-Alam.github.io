@@ -2,14 +2,512 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>vCard - Personal Portfolio</title>
+
+    <!--
+      - favicon
+    -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <h1>
-      This website is currently under maintainance. Hopefully it will be live
-      soon:) Thanks for your patience
-    </h1>
+    <!--
+      - #MAIN
+    -->
+
+    <main>
+      <!--
+        - #SIDEBAR
+      -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/my-avatar.png"
+              alt="Richard hanrick"
+              width="80"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Richard hanrick">
+              Muhammad Ali <br />Alam
+            </h1>
+
+            <p class="title">Software Engineer</p>
+          </div>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a
+                  href="mailto:alialam140847@gmail.com.com"
+                  class="contact-link"
+                  >alialam140847<br />@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+12133522795" class="contact-link"
+                  >+49 1556 6442382</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Linkedin Profile</p>
+
+                <address>linkedin.com/in/<br />muhammad-ali-alam/</address>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Siegen, 57076, Germany</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+        - #main-content
+      -->
+
+      <div class="main-content">
+        <!--
+          - #NAVBAR
+        -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+          - #ABOUT
+        -->
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              I am a highly motivated software engineer with a strong academic
+              background and diverse professional experience. I hold a Master of
+              Science in Computer Science with a specialization in Embedded
+              Systems from Universität Siegen, where I focused on courses such
+              as FPGA development, software engineering, computer architecture,
+              telematics, and ubiquitous computing. I completed my undergraduate
+              studies at IBA, Karachi, achieving good academic standing.
+            </p>
+
+            <p>
+              I have worked as a Full Stack Software Developer at CreditBook,
+              where I led key projects such as automating push notifications,
+              integrating SDKs to reduce costs, and migrating systems to a
+              microservice architecture to enhance scalability and resilience. I
+              also developed a web app for loan management and collaborated with
+              cross-functional teams to build the company's first and largest
+              income-generating loan application. My experience extends to A/B
+              testing using Firebase, which improved user conversion rates, and
+              conducting unit and manual testing to ensure robust software
+              performance.
+            </p>
+
+            <p>
+              My work experience includes roles as a Teacher’s Assistant at IBA
+              Karachi, where I guided students in data structures and operating
+              systems, and as an intern at Engro Corporation, where I
+              implemented and tested video conferencing solutions. I also worked
+              as a Game Developer Intern at Mindstorm Studio, developing a 3D
+              hyper-casual game.
+            </p>
+
+            <p>
+              I am passionate about leveraging my skills in embedded systems,
+              software engineering, and AI to create innovative technology
+              solutions. I am eager to continue developing my expertise and
+              contributing to impactful projects in the tech industry.
+            </p>
+          </section>
+
+          <!--
+            - service
+          -->
+
+          <section class="service">
+            <h3 class="h3 service-title">What i'm doing</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg
+                "
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web Development</h4>
+
+                  <p class="service-item-text">
+                    Build reliable, secure and scalable web applications using
+                    MERN stack.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile development</h4>
+
+                  <p class="service-item-text">
+                    Develop mobile applications for iOS and Android using React
+                    Native.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">
+                    Machine Learning and Artificial Intelligence
+                  </h4>
+                  <p class="service-item-text">
+                    Implementation Machine Learning models including image
+                    recognition, sentiment analysis, recommendation systems,
+                    Neural Networks and chatbots using LLM.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-photo.svg"
+                    alt="camera icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">
+                    Embedded Systems Development
+                  </h4>
+                  <p class="service-item-text">
+                    Design Specialized Hardware for AI related tasks to ensure
+                    that least resources are utilized without any compromise on
+                    accuracy.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+          - #RESUME
+        -->
+
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">University of Siegen</h4>
+
+                <span>Oct 2023 — Present</span>
+
+                <p class="timeline-text">
+                  This master's program equiped me with advanced skills in
+                  embedded systems, software engineering, computer architecture,
+                  and AI, focusing on FPGA development, telematics, and
+                  ubiquitous computing. I gain expertise in designing and
+                  optimizing intelligent systems, integrating AI into
+                  resource-constrained environments, and developing innovative
+                  applications for IoT, smart environments, and multimedia
+                  communication.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">IBA, Karachi</h4>
+
+                <span>Aug 2018 — May 2022</span>
+
+                <p class="timeline-text">
+                  Learn the fundamentals of computer science, including a breath
+                  wise exploration of multiple fields including Quantum
+                  Computing, Web and Mobile Based Applications, Data Science,
+                  Artificial Intelligence, and Bioinformatics. I have also
+                  learned the basics of software engineering, computer
+                  architecture, and computer networks.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  CreditBook | Full Stack Software Developer
+                </h4>
+
+                <span>July 2022 — June 2023</span>
+
+                <p class="timeline-text">
+                  • Responsible for automation of push notification, push
+                  template and in-app messages by integrating MoEngage sdk using
+                  NestJS.<br />
+                  • Integration of OTPless SDK, reducing login and sign-up cost,
+                  by at least a million PKR. <br />• Worked in the migration
+                  from monolith to microservice architecture eventually
+                  improving server resilience, scalability, and agility. <br />•
+                  Developed ReactJS web app for loan management, enhancing
+                  operational efficiency. <br />• Partnered with product and
+                  design teams to build a loan application, developing the first
+                  and largest income source for the company. <br />• Conducted
+                  and documented 5 A/B tests using Firebase, analyzing user
+                  behavior and improving user conversion rates up to 18.5% for
+                  some features. <br />• Created unit tests using Jest to verify
+                  functionality and manually tested to identify edge cases.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Engro Coporation | IT Intern
+                </h4>
+
+                <span>May 2021 — July 2021</span>
+
+                <p class="timeline-text">
+                  • Implementation and testing of IdeaHub (one solution for
+                  video conferencing) in multiple locations of Engro Corp
+                  regional offices. <br />• Training of IT staff to use the
+                  System.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Mindstorm Studio | Game Developer Intern
+                </h4>
+
+                <span>August 2021 — October 2021</span>
+
+                <p class="timeline-text">
+                  • Participated in summer Game Jam 2021 and develop a 3D
+                  hyper-casual game (Package Collector) in Unity3d using C#.
+                </p>
+              </li>
+            </ol>
+          </section>
+        </article>
+
+        <!--
+          - #CONTACT
+        -->
+
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+          <!-- https://www.google.com/maps/place/Siegen/@50.8814804,7.8599856,29337m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47bc1c91e71085a7:0x3dc2391d0cdbdbc7!8m2!3d50.8838492!4d8.0209591!16zL20vMDQzOHR5?entry=ttu&g_ep=EgoyMDI0MDkwMy4wIKXMDSoASAFQAw%3D%3D -->
+          <!-- src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd" -->
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d161654.20168810073!2d7.9645689!3d50.874383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b9a746f18c7f4d%3A0x419df64b1baf1da0!2sSiegen%2C%20Germany!5e0!3m2!1sen!2sde!4v1692213624391!5m2!1sen!2sde"
+                width="400"
+                height="300"
+                loading="lazy"
+              ></iframe>
+            </figure>
+          </section>
+
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+
+            <form action="#" class="form" data-form>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
+
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
+
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+      - custom js link
+    -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+      - ionicon link
+    -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
